@@ -8,6 +8,15 @@ This is the readme for Trackgenix Landing page .html
 - Title
 - Subtitle
 - Images
+- Buttons and links
+- Text
+    - Presentation
+    - Characteristics
+    - About us
+    - Contact info
+- Contact form
+- Footer with social networks and copyrights
+
 
 > _It will focus on the content aspects, not so much on the visual ones._
 
