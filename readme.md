@@ -2,7 +2,7 @@
 ## _Trackgenix_
 
 ``` 
-This is the readme for Trackgenix Landing page .html
+This is the readme for Trackgenix Landing page .html done by Marcia Berón for the weekly problematic (Week 1)
 ```
 > The .html file will only have
 - Title
