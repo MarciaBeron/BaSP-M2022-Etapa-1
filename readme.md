@@ -2,9 +2,13 @@
 ## _Trackgenix_
 
 ``` 
-This is the readme for Trackgenix Landing page .html done by Marcia Berón for the weekly problematic (Week 1)
+This is the readme for Trackgenix Landing page done by Marcia Berón 
 ```
-> The .html file will only have
+>## Week 1: .html file
+_It will focus on the content aspects, not so much on the visual ones._
+
+```
+The .html file will only have
 - Title
 - Subtitle
 - Images
@@ -16,10 +20,12 @@ This is the readme for Trackgenix Landing page .html done by Marcia Berón for t
     - Contact info
 - Contact form
 - Footer with social networks and copyrights
+```
 
+>## Week 3: .css file
+_This week will work on the visual aspects of the landing page using a css stylesheet._ 
 
-> _It will focus on the content aspects, not so much on the visual ones._
-
-[Desktop Landing page](C:/Users/equipo/OneDrive/Escritorio/BaSP-M2022-Etapa-1/Semana-1/index.html)
-
+```
+The style will be applied to a copy of our previous index.html.
+```
 
