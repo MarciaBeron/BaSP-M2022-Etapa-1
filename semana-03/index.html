@@ -23,74 +23,82 @@
             <button class="login">Login</button>
             <button class="signup">SignUp</button>
         </div>
-        <div>
-            <img src="https://cdn.worldvectorlogo.com/logos/tether.svg" width="40px" class="img-logo">
-            <h1>TRACKGENIX</h1>
-            <h3>DATA MANAGMENT</h3>
-        </div>
     </header>
     <aside class="lateral-menu">     
         <div>
             <h4><b>Menu</b></h4>
             <ul>
                 <li><a href="#history">History</a></li>
-                <li><a href="#about-us">About Us</a></li>
-                <li><a href="#contact">Contact Form</a></li>
-                <li><a href="#sources">Sources</a></li>
-                <li><a href="#get-system-information">Get system information</a></li>
-            </ul>
+                <li><a href="#about-us" class="about-us-li">About Us</a></li>
+                <li><a href="#contact" class="cnct-frm-li">Contact Form</a></li>
+                <li><a href="#sources" class="scr-li">Sources</a></li>
+             </ul>
+        </div>
+        <div class="cnct-us">
             <h4>Contact us</h4>
             <p>Sed varius enim lorem ullamcorper dolore aliquam aenean ornare velit lacus, 
                 ac varius enim lorem ullamcorper dolore. Proin sed aliquam facilisis ante interdum. 
                 Sed nulla amet lorem feugiat tempus aliquam.</p>
             <address id="contact">
-                <i class="fa fa-envelope-o" aria-hidden="true"></i>
-                <a href="trackgenix@info.com">E-mail</a>
-                <i class="fa fa-home" aria-hidden="true"></i>
-                1234 Somewhere Road #8254
-                Nashville, TN 00000-0000
+                <span class="mail">
+                    <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                    <a href="trackgenix@info.com">trackgenix@info.com</a></span>
+                <span class="adress">
+                    <i class="fa fa-home" aria-hidden="true"></i>
+                     1234 Somewhere Road #8254
+                    Nashville, TN 00000-0000
+                </span>
             </address>
             <button type="button">Get system information</button>
         </div>
     </aside>
+    <div class="title">
+        <img src="https://cdn.worldvectorlogo.com/logos/tether.svg" width="40px" class="img-logo">
+        <h1>TRACKGENIX</h1>
+        <h3>DATA MANAGMENT</h3>
+    </div>
     <main class="main"> 
-            <div>
-            <img src="../Assets/Data-Management-Platform.png" alt="Data-Management-Platform" width="400">
+        <div class="data-manag">
+            <img src="../Assets/Data-Management-Platform.png" alt="Data-Management-Platform" width="400" class="data-img">
             <p>Presentation of the company : A nice message about us that you find 
-                very attractive, friendly, that gives you confidence to stay on the site.</p>
-            </div>
-            <div>
+                very attractive, friendly, that gives you confidence to stay on the site.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium pariatur perspiciatis, 
+                voluptate, minima iste recusandae nesciunt nihil error quibusdam ducimus 
+                non repellat voluptas aspernatur assumenda, alias distinctio nulla veniam 
+                tempora. </p>
+        </div>
+        <div class="imgs">
             <figure class="simplicity">
-                <img src="../Assets/primera-imagen.jpg" width="200px">
+                <img src="../Assets/primera-imagen.jpg" width="100px" height="100px">
                 <figcaption>Simplicity</figcaption>
             </figure>
             <figure class="efficiency">
-                <img src="../Assets/efficiency.png" width="200px">
+                <img src="../Assets/efficiency.png" width="100px" height="100px">
                 <figcaption>Efficiency</figcaption>
             </figure>
             <figure class="tracking">
-                <img src="../Assets/tracking.png" width="200px">
+                <img src="../Assets/tracking.png" width="100px" height="100px">
                 <figcaption>Tracking</figcaption>
             </figure>
             <figure class="confidence">
-                <img src="../Assets/confidence.jpg" width="200px">
+                <img src="../Assets/confidence.jpg" width="100px" height="100px">
                 <figcaption>Confidence</figcaption>
             </figure>
             <figure class="management">
-                <img src="../Assets/management.jpg" width="200px">
+                <img src="../Assets/management.jpg" width="100px" height="100px">
                 <figcaption>Managment</figcaption>
             </figure>
-            </div>
-            <div class="what-can">
-                <h4>What can Trackgenix do for you?</h4>
-                <ul>
-                    <li>Time registration</li>
-                    <li>Reports</li>
-                    <li>Resource management</li>
-                    <li>Assign multiple roles</li>
-                </ul>
-            </div>
-            <div class="why-choose">
+        </div>
+        <div class="what-can">
+            <h4>What can Trackgenix do for you?</h4>
+            <ul>
+                <li>Time registration</li>
+                <li>Reports</li>
+                <li>Resource management</li>
+                <li>Assign multiple roles</li>
+            </ul>
+        </div>
+        <div class="why-choose">
                 <h4>Why choose Trackgenix is a quality leap?</h4>
                 <ul>
                     <li>Increase productivity</li>
@@ -98,57 +106,69 @@
                     <li>Facilitate work traceability</li>
                     <li>Improve decision making</li>
                 </ul>
-            </div>
-            <fieldset class="about-us">
-                <legend><h3 id="about-us">About Us</h3></legend>    
-                <h4>Confidential agreement</h4>
-                <img src="../Assets/img-abt-us.jpg" alt="Data" width="170px">
-                <p>Lorem ipsum dolor sit accumsan interdum nisi, quis tincidunt felis 
+        </div>
+        <div class="about-us">
+            <h3 id="about-us">About Us</h3>
+            <h4>Confidential agreement</h4>
+            <span class="img-abt">
+                <img src="../Assets/img-abt-us.jpg" alt="Data" width="200px" height="100px">
+                <p class="abt-us-t">Lorem ipsum dolor sit accumsan interdum nisi, quis tincidunt felis 
                 sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus 
-                vestibulum.</p>
-                <img src="../Assets/data-cloud.png" alt="Data cloud" width="170px">
-            </fieldset>
+                vestibulum. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </span>
+            <span class="data-cld">
+            <p class="abt-us-tt">Ratione quos eaque alias consectetur nobis dolore excepturi ullam eveniet delectus a. 
+            Cumque dolor impedit amet ducimus vero assumenda fugiat quaerat totam.</p>
+            <img src="../Assets/data-cloud.png" alt="Data cloud" width="250px">
+            </span>
+        </div>
         <section class="forms">
             <form action="/action_page.php" method="post">
                 <h4 id="get-system-information">Get System Information</h4>   
-                <label for="name">Name:</label>
+                <label for="name" class="name">Name:</label>
                 <input type="text" name="name" placeholder="Write your name">
-                <label for="email">E-mail:</label>
+                <label for="email" class="email">E-mail:</label>
                 <input type="email" name="email" placeholder="Write your e-mail">
-                <label for="select-c-area">Select contact area:</label>
-                <select name="select-c-area">
+                <label for="select-c-area" class="select-area">Select contact area:</label>
+                <select name="select-c-area" class="select-words">
                     <option value="select-c-area">Select area </option>
                 </select>
             </form>
-            <textarea name="write-ur-message" placeholder="Write your message"></textarea>
-            <input type="submit" name="Send" value="Send">
-        </section>
-        <section class="pre-footer">
-            <div>
-                <ul class="products">
-                    <h4>Products</h4>
-                    <li><a href="#funcionalities">Funcionalities</a></li>
-                    <li><a href="#download">Download</a></li>
-                    <li><a href="#integration">Integration</a></li>
-                    <li><a href="#extras">Extras</a></li>
-                </ul>
-                <ul class="company">
-                    <h4>Company</h4>
-                    <li><a href="#information">Information</a> </li>
-                    <li><a href="#clients">Clients</a> </li>
-                    <li><a href="#resources">Resources</a> </li>
-                    <li><a href="#blog">Blog</a> </li>
-                </ul>
-                <ul class="support">
-                    <h4>Support</h4>
-                    <li><a href="#help">Help</a></li>
-                    <li><a href="#tutorials">Tutorials</a> </li>
-                    <li><a href="#api">API</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
+            <div class="textarea">
+                <textarea name="write-ur-message" placeholder="Write your message"></textarea>
+                <input type="submit" name="Send" value="Send">
             </div>
         </section>
     </main>
+    <section class="pre-footer">
+        <div class="products">
+            <ul>
+                <h4>Products</h4>
+                <li><a href="#funcionalities">Funcionalities</a></li>
+                <li><a href="#download">Download</a></li>
+                <li><a href="#integration">Integration</a></li>
+                <li><a href="#extras">Extras</a></li>
+            </ul>
+        </div>
+        <div class="company">  
+            <ul>
+                <h4>Company</h4>
+                <li><a href="#information">Information</a> </li>
+                <li><a href="#clients">Clients</a> </li>
+                <li><a href="#resources">Resources</a> </li>
+                <li><a href="#blog">Blog</a> </li>
+            </ul>
+        </div>
+        <div class="support">
+            <ul>
+                <h4>Support</h4>
+                <li><a href="#help">Help</a></li>
+                <li><a href="#tutorials">Tutorials</a> </li>
+                <li><a href="#api">API</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </section>
     <footer class="footer">
         <span><a href="https://www.linkedin.com/" target="_blank"> <i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
             <a href="https://twitter.com/" target="_blank"> <i class="fa fa-twitter" aria-hidden="true"></i></a>
