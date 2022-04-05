@@ -1,5 +1,5 @@
 body{
-    font-family: -apple-system, Roboto, sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 a:link{
     color: black;
@@ -18,15 +18,13 @@ a:visited{
     margin-left: 3px;
 }
 .tutorial{
-    font-size: 14px ;
+    font-size: 14px;
     padding-left: 260px;
-    font-weight: 550;
     padding-right: 3px;
     border-right: 1px solid black;
 }
 .contact{
     font-size: 14px;
-    font-weight: 550;
     padding-right: 50px;
 }
 .search-bar i{
@@ -49,9 +47,9 @@ a:visited{
     margin-left: 280px;
     border-radius: 20px;
     border-style: none;
-    font-family: -apple-system, Roboto, sans-serif;
+    font-family: Roboto, sans-serif;
     font-size: 15px ;
-    font-weight: 600;
+    font-weight: 400;
 }
 .signup{
     background-color: white;
@@ -60,9 +58,9 @@ a:visited{
     margin-left: 15px;
     border-radius: 20px;
     border-style: none;
-    font-family: -apple-system, Roboto, sans-serif;
+    font-family: Roboto, sans-serif;
     font-size: 15px ;
-    font-weight: 600;
+    font-weight: 400;
 }
 .img-logo{
     /**display: inline;**/
@@ -92,9 +90,7 @@ aside h4{
     padding-top: 20px;
     margin-left: 10px;
     width: 70%;
-    font-family: -apple-system, Roboto, sans-serif;
     font-size: large;
-    font-weight: 300;
     padding-bottom: 10px;
     border-bottom: 2px solid #ED2626;
 }
@@ -266,7 +262,7 @@ main{
     margin: 50px;
 }
 .what-can h4{
-    font-family: -apple-system, Roboto, sans-serif;
+    font-family: Roboto, sans-serif;
     font-size: 20px;
     padding-bottom: 20px;
 }
@@ -281,9 +277,9 @@ main{
     margin-left: 50px;
 }
 .why-choose h4{
-    width: 240px;
-    font-family: -apple-system, Roboto, sans-serif;
+    font-family: Roboto, sans-serif;
     font-size: 20px;
+    width: 240px;
     padding-bottom: 20px;
 }
 .why-choose li:before{
@@ -381,6 +377,7 @@ main{
     border-radius: 10px;
 }
 .select-words{
+    font-family: 'Roboto', sans-serif;
     color: #505168;
 }
 .forms .textarea{
@@ -393,6 +390,7 @@ main{
    margin-top: -203px;
 }
 textarea{
+    font-family: 'Roboto', sans-serif;
     height: 165px;
     width: 300px;
     border-radius: 5px;
