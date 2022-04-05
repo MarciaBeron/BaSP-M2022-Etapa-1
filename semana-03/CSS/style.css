@@ -64,23 +64,32 @@ a:visited{
     font-size: 15px ;
     font-weight: 600;
 }
+.title{
+    display: inline-block;
+    width: 40%;
+    vertical-align: top;
+}
+.titless{
+    display: inline-block;
+    width: 87%;
+    vertical-align: top;
+}
 .img-logo{
     display: inline-block;
     margin-top: 2%;
-    margin-left: 5%;
 }
 h1{
-    display: inline-block;
+    display: block;
     vertical-align: top;
     margin-top: 2%;;
     font-size:x-large;
     font-weight: 500;
 }
 h3{
-    display: inline-block;
-    margin-left: -17%;
+    display: block;
     font-size: large;
     font-weight: 450;
+    margin-left: 3%;
 }
 aside{
     display: inline-block; 
