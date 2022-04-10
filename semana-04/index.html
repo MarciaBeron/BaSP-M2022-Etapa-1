@@ -7,27 +7,34 @@
     <title>Trackgenix</title>
     <link rel="icon" type="image/x-icon" href="https://cdn.worldvectorlogo.com/logos/tether.svg">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="../semana-03/CSS/reset.css">
+    <link rel="stylesheet" href="../semana-04/CSS/reset.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../semana-03/CSS/style.css">
+    <link rel="stylesheet" href="../semana-04/CSS/header.css">
+    <link rel="stylesheet" href="../semana-04/CSS/aside.css">
+    <link rel="stylesheet" href="../semana-04/CSS/main.css">
+    <link rel="stylesheet" href="../semana-04/CSS/footer.css">
 </head>
 <body>
     <header>
         <div class="topnav">
             <i class="fa fa-bars"></i>
-            <a href="#tutorial" class="tutorial">Tutorial</a>
-            <a href="#contact" class="contact">Contact</a>
-            <span class="search-bar">   
+            <div class="tutorial-contact">
+                <a href="#tutorial" class="tutorial">Tutorial</a>
+                <a href="#contact" class="contact">Contact</a>
+            </div>
+            <div class="search-bar">   
                 <input type="text" class="search" placeholder="Search...">
                 <i class="fa fa-search" aria-hidden="true"></i>
-            </span>
-            <button class="login">Login</button>
-            <button class="signup">SignUp</button>
+            </div>
+            <div class="login-signup">
+                <button class="login">Login</button>
+                <button class="signup">SignUp</button>
+            </div>
         </div>
     </header>
-    <aside class="lateral-menu">     
+    <aside>     
         <div>
             <h4><b>Menu</b></h4>
             <ul>
@@ -55,16 +62,16 @@
             <button type="button">Get system information</button>
         </div>
     </aside>
-    <main class="main"> 
-        <span class="title">
-            <img src="https://cdn.worldvectorlogo.com/logos/tether.svg" width="40px" class="img-logo">
+    <main> 
+        <div class="title">
+            <img src="https://cdn.worldvectorlogo.com/logos/tether.svg">
             <div class="titless">   
                 <h1>TRACKGENIX</h1>
-                <h3>DATA MANAGEMENT</h3>
+                <h3>DATA&nbsp;MANAGEMENT</h3>
             </div>
-        </span>
+        </div>
         <div class="data-manag">
-            <img src="../Assets/Data-Management-Platform.png" alt="Data-Management-Platform" width="400" class="data-img">
+            <img src="../Assets/Data-Management-Platform.png" alt="Data-Management-Platform">
             <p>Presentation of the company : A nice message about us that you find 
                 very attractive, friendly, that gives you confidence to stay on the site.
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium pariatur perspiciatis, 
@@ -74,23 +81,23 @@
         </div>
         <div class="imgs">
             <figure class="simplicity">
-                <img src="../Assets/primera-imagen.jpg" width="80px" height="80px">
+                <img src="../Assets/primera-imagen.jpg">
                 <figcaption>Simplicity</figcaption>
             </figure>
             <figure class="efficiency">
-                <img src="../Assets/efficiency.png" width="80px" height="80px">
+                <img src="../Assets/efficiency.png">
                 <figcaption>Efficiency</figcaption>
             </figure>
             <figure class="tracking">
-                <img src="../Assets/tracking.png" width="80px" height="80px">
+                <img src="../Assets/tracking.png">
                 <figcaption>Tracking</figcaption>
             </figure>
             <figure class="confidence">
-                <img src="../Assets/confidence.jpg" width="80px" height="80px">
+                <img src="../Assets/confidence.jpg">
                 <figcaption>Confidence</figcaption>
             </figure>
             <figure class="management">
-                <img src="../Assets/management.jpg" width="80px" height="80px">
+                <img src="../Assets/management.jpg">
                 <figcaption>Managment</figcaption>
             </figure>
         </div>
@@ -115,8 +122,10 @@
             </div>
         </div>
         <div class="about-us">
-            <h3 id="about-us">About Us</h3>
-            <h4>Confidential agreement</h4>
+            <div class="h">
+                <h3 id="about-us">About Us</h3>
+                <h4>Confidential agreement</h4>
+            </div>
             <div class="img-abt">
                 <img src="../Assets/img-abt-us.jpg" alt="Data" width="200px" height="100px">
                 <p class="abt-us-t">Lorem ipsum dolor sit accumsan interdum nisi, quis tincidunt felis 
@@ -177,12 +186,13 @@
             </ul>
         </div>
     </section>
-    <footer class="footer">
-        <span class="icons-f"><a href="https://www.linkedin.com/" target="_blank"> <i class="fa fa-linkedin-square fa-lg" aria-hidden="true"></i></a>
+    <footer>
+        <div class="icons-f"><a href="https://www.linkedin.com/" target="_blank"> <i class="fa fa-linkedin-square fa-lg" aria-hidden="true"></i></a>
             <a href="https://twitter.com/" target="_blank"> <i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a>
             <a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a>
             <a href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram fa-lg" aria-hidden="true"></i></a>
-            <a href="https://github.com/" target="_blank"><i class="fa fa-github fa-lg" aria-hidden="true"></i></a></span>
+            <a href="https://github.com/" target="_blank"><i class="fa fa-github fa-lg" aria-hidden="true"></i></a>
+        </div>
         <p class="mdeo">Montevideo, Uruguay</p>
         <p class="copy">Copyright 2022 Radium Rocket. All rights reserved.</p>
     </footer>
