@@ -25,10 +25,11 @@ a:visited{
     order: 1;
 }
 .tutorial-contact:nth-child(2){
-    flex: row;
     order: 2;
 }
 .tutorial{
+    display: flex;
+    flex-direction: row;
     font-size: 14px;
     font-weight: 550;
 }
@@ -37,13 +38,15 @@ a:visited{
     flex-direction: row;
     font-size: 14px;
     font-weight: 550;
+    margin-left: 3%;
+    padding-left: 3%;
     border-left: 1px solid black;
 } 
 .search-bar:nth-child(3){
      order: 3;
 }
 .search-bar{
-    display: flex;;
+    display: flex;
     flex-flow: row;
     color: #505168;
     background: white;
@@ -112,7 +115,7 @@ a:visited{
         color: white;
     }
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 769px) and (max-width: 1023px) {
     .tutorial{
         display: none;
     }
@@ -128,6 +131,30 @@ a:visited{
     .signup{
         padding: 1%;
         width: 30%;
+        font-size: 14px;
+        font-weight: 500;
+    }
+}
+@media only screen and (min-width: 1024px){
+    .topnav{
+        padding: 0.5%;
+    }
+    .tutorial-contact{
+        display: flex;
+        flex-direction: row;
+    } 
+    .login-signup:nth-child(4){
+        width: 20%;
+    }
+    .login{
+        padding: 2%;
+        width: 35%;
+        font-size: 14px;
+        font-weight: 500;
+    }
+    .signup{
+        padding: 2%;
+        width: 35%;
         font-size: 14px;
         font-weight: 500;
     }
