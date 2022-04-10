@@ -1,12 +1,15 @@
 main{
     display: flex;
     flex-direction: column;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 .title{
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    margin-left: 3%;
     margin-top: 10%;
     margin-bottom: 10%;
 }
@@ -15,7 +18,7 @@ main{
     height: 40px;
 }
 .titless{
-    text-align-last: end;
+    text-align-last: start;
 }
 h1{
     display: flex;
@@ -32,14 +35,17 @@ h3{
 }
 .data-manag{
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: center;
+    align-items: center;
 }
 .data-manag img{
-    width: 80%;
+    width: 55%;
+    padding-right: 2%;
 }
 .data-manag p{
-    width: 80%;
+    width: 30%;
     text-align: center;
 }
 .imgs{
@@ -201,15 +207,19 @@ figcaption{
 }
 .img-abt{
     display: flex;
-    align-items: flex-end;
-    justify-content: flex-start;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
 }
 .img-abt img{
     display: flex;
     flex-direction: row;
+    align-self: flex-start;
     box-shadow: 0px 5px 5px #505168;
+    width: 30%;
+    max-height: fit-content;
 }
-.abt-us-t{
+.img-abt p{
     display: flex;
     flex-direction: row;
     font-size: small;
@@ -217,19 +227,21 @@ figcaption{
 }
 .data-cld{
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: flex-end;
 }
-.abt-us-tt{
+.data-cld p{
     display: flex;
     flex-direction: row;
     font-size: small;
-    width: 31%;
+    width: 65%;
 }
 .data-cld img{
     display: flex;
     flex-direction: row;
     box-shadow: 0px 5px 5px #505168;
+    width: 30%;
+    height: fit-content;
 }
 form{
     width: 33%;
@@ -313,7 +325,6 @@ textarea{
     justify-content: space-around;
     align-content: space-around;
     align-items: baseline;
-    width: 100%;
     height: auto;
     padding: 2%;
     background-color: #50A780;
@@ -365,7 +376,7 @@ textarea{
     padding-bottom: 8px;
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 768px) {
     main .title img{
         width: 50px;
         height: 50px;
@@ -373,7 +384,47 @@ textarea{
     main .titless h1{
         font-size: xx-large;
     }
+    .data-manag img{
+        width: 80%;
+    }
+    .data-manag p{
+        width: 80%;
+    }
     .forms{
         display: none;
+    }
+}
+@media only screen and (min-width: 768px){
+    .tutorial{
+        display: none;
+    }      
+    .forms{
+        display: none;
+    }
+    .title{
+        justify-content: start;
+        margin-top: 5%;
+        margin-bottom: 5%;
+        margin-left: inherit;
+        margin-right: inherit;
+    }
+    .data-manag p{
+        text-align: left;
+    }
+    .imgs{
+        justify-content: flex-start;
+    }
+    .img-and-middle{
+        display: flex;
+        flex-direction: row-reverse;
+        flex-wrap: nowrap;
+        justify-content: space-evenly;
+        align-items: baseline;
+    }
+    .data-cld{
+        justify-content: flex-end;
+    }
+    .data-cld p{
+        max-width: 35%;
     }
 }
