@@ -3,9 +3,10 @@ aside{
     flex-direction: column;
     width: 20%;
     height: 100%;
-    background-image: linear-gradient(to bottom, #50A780, #50A780, white);
+    background-image: linear-gradient(to bottom, #50A780, white);
 }
 aside h4{
+    align-self: flex-start;
     padding-top: 20px;
     margin-left: 10px;
     width: 70%;
@@ -45,6 +46,9 @@ aside li .scr-li{
     padding-right: 50px;
 }
 .cnct-us{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding-top: 80px;
 }
 aside p{
@@ -60,6 +64,7 @@ aside p{
     font-size: small;
     padding-left: 10px;
     padding-top: 80px;
+    text-shadow: 0px 2px 3px #505168;
 }
 #contact .mail{
     border-bottom: 1px solid #CECACA;
@@ -74,7 +79,7 @@ aside p{
     color: #505168;
 }
 .cnct-us button{
-    margin-left: 10px;
+    display: flex;
     padding-right: 25px;
     padding-left: 25px;
     padding-top: 10px;

@@ -53,7 +53,7 @@ a:visited{
     border-radius: 20px;
     border: 2px solid white;
     align-items: center;
-    width: 30%;
+    width: 27%;
 }
 .search{
     display: flex;
@@ -138,11 +138,15 @@ a:visited{
 @media only screen and (min-width: 1024px){
     .topnav{
         padding: 0.5%;
+        justify-content: space-between;
     }
     .tutorial-contact{
         display: flex;
         flex-direction: row;
     } 
+    .search-bar i{
+        margin-right: 2%;
+    }
     .login-signup:nth-child(4){
         width: 20%;
     }
