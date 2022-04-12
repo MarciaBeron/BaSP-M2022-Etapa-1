@@ -303,10 +303,10 @@ form select{
 form .textarea{
     display: flex;
     flex-direction: column;
-    height: 45%;
+    height: auto;
     width: 90%;
     margin: 5%;
-    margin-top: 19%;
+    margin-top: 21%;
     align-items: stretch;
 }
 textarea{
@@ -398,14 +398,14 @@ textarea{
     .data-manag p{
         width: 80%;
     }
-    .forms{
+    form{
+        display: none;
+    }
+    form .textarea{
         display: none;
     }
 }
 @media only screen and (min-width: 768px) and (max-width: 1023px){
-    .forms{
-        display: none;
-    }
     .title{
         justify-content: start;
         margin-top: 5%;
@@ -431,6 +431,12 @@ textarea{
     }
     .data-cld p{
         max-width: 35%;
+    }
+    form{
+        display: none;
+    }
+    form .textarea{
+        display: none;
     }
 }
 @media only screen and (min-width: 1024px){
