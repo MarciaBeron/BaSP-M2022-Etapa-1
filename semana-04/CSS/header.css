@@ -27,15 +27,14 @@ a:visited{
 .tutorial-contact:nth-child(2){
     order: 2;
 }
+.tutorial-contact{
+    display: none;
+}
 .tutorial{
-    display: flex;
-    flex-direction: row;
     font-size: 14px;
     font-weight: 550;
 }
 .contact{
-    display: flex;
-    flex-direction: row;
     font-size: 14px;
     font-weight: 550;
     margin-left: 3%;
@@ -43,35 +42,29 @@ a:visited{
     border-left: 1px solid black;
 } 
 .search-bar:nth-child(3){
-     order: 3;
+    order: 4;
 }
 .search-bar{
     display: flex;
-    flex-flow: row;
-    color: #505168;
-    background: white;
-    border-radius: 20px;
-    border: 2px solid white;
-    align-items: center;
-    width: 27%;
+    flex-direction: row;
+}
+.search-bar i{
+    display: flex;
+    color: white;
 }
 .search{
-    display: flex;
+    display: none;
     border-style: none;
     border-radius: 20px;
     padding-top: 2%;
     padding-bottom: 2%;
     flex: 1;
 }
-.search i{
-    display: flex;
-    flex-direction: row;
-}
 .login-signup:nth-child(4){
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    order: 4;
+    order: 3;
     width: 40%;
 }
 .login{
@@ -94,30 +87,37 @@ a:visited{
     font-weight: 600;
     padding: 3%;
 }
-
-@media only screen and (max-width: 768px) {
+@media only screen and (min-width: 769px) {
     .tutorial-contact{
-        display: none;
-    }      
-    .search{
-        display: none;
+        display: flex;
+        flex-direction: row;
     }
     .search-bar:nth-child(3){
-        order: 4;
-        background: none;
-        border: none;
-        width: auto;
-    }
-    .login-signup:nth-child(4){
+        display: flex;
+        flex-flow: row;
+        color: #505168;
+        background: white;
+        border-radius: 20px;
+        border: 2px solid white;
+        align-items: center;
+        width: 27%;
         order: 3;
     }
-    .search-bar i{
-        color: white;
+   .search{
+        display: flex;
+        border-style: row;
+        border-radius: 20px;
+        padding-top: 2%;
+        padding-bottom: 2%;
+        flex: 1;
     }
-}
-@media only screen and (min-width: 769px) and (max-width: 1023px) {
-    .tutorial{
-        display: none;
+    .search-bar i{
+        display: flex;
+        color: #505168;
+        margin-right: 2%;
+    }
+    .login-signup:nth-child(4){
+        order: 4;
     }
     .login-signup{
         width: 20%;
@@ -143,11 +143,32 @@ a:visited{
     .tutorial-contact{
         display: flex;
         flex-direction: row;
-    } 
+    }
+    .search-bar:nth-child(3){
+        display: flex;
+        flex-flow: row;
+        color: #505168;
+        background: white;
+        border-radius: 20px;
+        border: 2px solid white;
+        align-items: center;
+        width: 27%;
+        order: 3; 
+    }
+    .search{
+        display: flex;
+        border-style: row;
+        border-radius: 20px;
+        padding-top: 2%;
+        padding-bottom: 2%;
+        flex: 1;
+    }
     .search-bar i{
+        display: flex;
         margin-right: 2%;
     }
     .login-signup:nth-child(4){
+        order: 4;
         width: 20%;
     }
     .login{
@@ -163,6 +184,3 @@ a:visited{
         font-weight: 500;
     }
 }
-/* 480 px para Mobile
-768px para Tablet
-1024px para Desktop */

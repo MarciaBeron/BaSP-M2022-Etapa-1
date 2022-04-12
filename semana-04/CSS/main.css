@@ -15,8 +15,8 @@ main{
     margin-bottom: 10%;
 }
 .title img{
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
 }
 .titless{
     text-align-last: start;
@@ -25,7 +25,7 @@ h1{
     display: flex;
     flex-direction: column;
     margin-top: 2%;
-    font-size:x-large;
+    font-size:xx-large;
     font-weight: 500;
 }
 h3{
@@ -42,12 +42,12 @@ h3{
     align-items: center;
 }
 .data-manag img{
-    width: 55%;
+    width: 88%;
     margin-right: 2%;
     box-shadow: 0px 5px 5px #505168;
 }
 .data-manag p{
-    width: 30%;
+    width: 80%;
     text-align: center;
 }
 .imgs{
@@ -246,7 +246,7 @@ figcaption{
     height: fit-content;
 }
 form{
-    display: flex;
+    display: none;
     flex-direction: row;
     width: 100%;
 }
@@ -301,7 +301,7 @@ form select{
     color: #505168;
 }
 form .textarea{
-    display: flex;
+    display: none;
     flex-direction: column;
     height: auto;
     width: 90%;
@@ -383,29 +383,7 @@ textarea{
 .support li{
     padding-bottom: 8px;
 }
-
-@media only screen and (max-width: 768px) {
-    main .title img{
-        width: 50px;
-        height: 50px;
-    }
-    main .titless h1{
-        font-size: xx-large;
-    }
-    .data-manag img{
-        width: 80%;
-    }
-    .data-manag p{
-        width: 80%;
-    }
-    form{
-        display: none;
-    }
-    form .textarea{
-        display: none;
-    }
-}
-@media only screen and (min-width: 768px) and (max-width: 1023px){
+@media only screen and (min-width: 768px) {
     .title{
         justify-content: start;
         margin-top: 5%;
@@ -413,8 +391,16 @@ textarea{
         margin-left: inherit;
         margin-right: inherit;
     }
+    .title img{
+        width: 40px;
+        height: 40px;
+    }
     .data-manag p{
+        width: 30%;
         text-align: left;
+    }
+    .data-manag img{
+        width: 55%;
     }
     .imgs{
         justify-content: flex-start;
@@ -459,7 +445,19 @@ textarea{
     .data-manag p{
         text-align: left;
     }
+    .img-and-middle{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: space-evenly;
+        align-items: baseline;
+    }
     .imgs{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: inherit;
         margin: 5%;
         margin-top: 10%;
     }
@@ -467,6 +465,7 @@ textarea{
         margin: 1%;
     }
     .middle{
+        width: inherit;
         justify-content: space-evenly;
         padding-bottom: 10%;
     }
@@ -486,6 +485,12 @@ textarea{
     }
     .data-cld p{
         max-width: 35%;
+    }
+    form{
+        display: flex;
+    }
+    form .textarea{
+        display: flex;
     }
     .pre-footer{
         justify-content: space-evenly;
