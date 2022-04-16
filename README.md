@@ -42,3 +42,9 @@ The style will be applied to a copy of our previous index.html.
 _This week we will work on the responsive dsesign to our landing page, using flex-box._
 ```
 The style will be applied to a copy of the original index.html file and it must be responsive to mobile, tablet and desktop.
+```
+>## Week 5: JavaScript
+_This week's work will be an introduction to JavaScript_
+```
+There will be as many archives as excercises listed on the weekly project description. They will serve as an introduction to JavaScript.
+```

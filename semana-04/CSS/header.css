@@ -140,47 +140,15 @@ a:visited{
         padding: 0.5%;
         justify-content: space-between;
     }
-    .tutorial-contact{
-        display: flex;
-        flex-direction: row;
-    }
-    .search-bar:nth-child(3){
-        display: flex;
-        flex-flow: row;
-        color: #505168;
-        background: white;
-        border-radius: 20px;
-        border: 2px solid white;
-        align-items: center;
-        width: 27%;
-        order: 3; 
-    }
-    .search{
-        display: flex;
-        border-style: row;
-        border-radius: 20px;
-        padding-top: 2%;
-        padding-bottom: 2%;
-        flex: 1;
-    }
-    .search-bar i{
-        display: flex;
-        margin-right: 2%;
-    }
     .login-signup:nth-child(4){
-        order: 4;
         width: 20%;
     }
     .login{
         padding: 2%;
         width: 35%;
-        font-size: 14px;
-        font-weight: 500;
     }
     .signup{
         padding: 2%;
         width: 35%;
-        font-size: 14px;
-        font-weight: 500;
     }
 }
