@@ -48,3 +48,7 @@ _This week's work will be an introduction to JavaScript_
 ```
 There will be as many archives as excercises listed on the weekly project description. They will serve as an introduction to JavaScript.
 ```
+>## Week 6: JavaScript DOM
+_This week's problem involves working with DOM_
+```
+There will be created 2 extra html files corresponding to Sign-Up and Login pages. They will be linked to the landing. Both pages will also have forms to fill in with personal information, for each form there will be correct and error messages. 

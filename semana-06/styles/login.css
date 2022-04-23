@@ -1,0 +1,122 @@
+.home:nth-child(4){
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    order: 3;
+    width: 15%;
+}
+.home{
+    background-color: white;
+    width: 90%;
+    border-radius: 20px;
+    border-style: none;
+    font-family: 'Roboto', sans-serif;
+    font-stretch: inherit;
+    font-weight: 600;
+    padding: 1%;
+}
+.form-signin{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2%;
+}
+form h3{
+    color: #373867;
+    font-size: xx-large;
+    font-weight: bolder;
+    margin-bottom: 2%;
+}
+form input{
+    color: #505168;
+    padding: 2%;
+    padding-right: 15%;
+    border: 1px solid #373867;
+    border-radius: 4px;
+}
+form label{
+    color: #505168;
+}
+.e-mail{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2%;
+    width: 45%;
+}
+.wrng-user{
+    font-size: small;
+    color: #F13312;
+}
+.password{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2%;
+    width: 45%;
+}
+.wrng-passwrd{
+    font-size: small;
+    color: #F13312;
+}
+.remember-forgot{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: small;
+    width: 45%;
+    margin-bottom: 5%;
+}
+.remember-me{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.forgot{
+    align-items: center;
+    justify-content: flex-end;
+}
+.frgt-passwrd{
+    color: #505168;
+    background-color: none;
+    border: none;
+}
+.button-login{
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    margin-bottom: 10%;
+}
+.button-login input{
+    color: #505168;
+    background-color: #BEE2AE;
+    border-radius: 5px;
+    border: none;
+    padding: 10%;
+}
+@media only screen and (min-width: 768px) {
+    main{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin: 0%;
+    }
+    .title{
+        justify-content: center;
+    }
+    .home:nth-child(4){
+        order: 4;
+        width: 10%;
+        padding: 0.5%;
+    }
+    .home{
+        padding: 1%;
+        width: 60%;
+        font-size: 14px;
+        font-weight: 500;
+    }
+    .button-login{
+        width: 10%;
+    }
+}
+@media only screen and (min-width: 1024px){
+}
