@@ -43,19 +43,16 @@ form label{
     margin-bottom: 2%;
     width: 45%;
 }
-.wrng-user{
+.message-error{
     font-size: small;
     color: #F13312;
+    visibility: hidden;
 }
 .password{
     display: flex;
     flex-direction: column;
     margin-bottom: 2%;
     width: 45%;
-}
-.wrng-passwrd{
-    font-size: small;
-    color: #F13312;
 }
 .remember-forgot{
     display: flex;
