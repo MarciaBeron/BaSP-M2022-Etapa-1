@@ -1,4 +1,4 @@
-function emailValidation(input){
+function emailValidation(input) {
   var validateEmail = /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/;
   return validateEmail.test(input);
 }
@@ -8,16 +8,16 @@ function validation(param) {
   var letters = 0;
   var numbers = 0;
   for (let i = 0; i < param.length; i++) {
-    if (arrayLetters.includes(param[i].toLocaleLowerCase())){
+    if (arrayLetters.includes(param[i].toLocaleLowerCase())) {
       letters++;
-    }else{
+    } else {
       Number.isInteger(param)
       numbers++;
     }
   }
-  if (param.length < 1 || letters <= 0 || numbers <= 0) {
+  if (param.length < 8 || letters <= 0 || numbers <= 0) {
     return false
-  }else{
+  } else {
     return true
   }
 }
@@ -25,12 +25,12 @@ function validation(param) {
 var emailError = ""
 var passwordError = ""
 
-window.onload = function(){
+window.onload = function() {
 
   var usernameInput = document.getElementById("e-mail");
   var errorUsername = document.getElementById("wrong-user");
   usernameInput.addEventListener("blur", usernameMessage);
-  function usernameMessage(){
+  function usernameMessage() {
     if (emailValidation(usernameInput.value) == false) {
       errorUsername.style.visibility="visible";
       emailError = errorUsername.textContent;
@@ -45,7 +45,7 @@ window.onload = function(){
   var errorPassword = document.getElementById("wrong-password");
   var passwordCall = document.getElementById("password");
   passwordCall.addEventListener("blur", passwordMessage);
-  function passwordMessage(){
+  function passwordMessage() {
     if (validation(passwordCall.value) == false) {
       errorPassword.style.visibility="visible";
       passwordError = errorPassword.textContent;
@@ -59,15 +59,15 @@ window.onload = function(){
   
   var buttonLogin = document.querySelector('input[type="submit"]');
   buttonLogin.addEventListener("click", clickLogin);
-  function clickLogin(){
-    alert("Email: " + emailError + "\nPassword: " + passwordError)
+  function clickLogin() {
+    alert ("Email: " + emailError + "\nPassword: " + passwordError)
   }
 
   var buttonForgotPassword = document.querySelector('button[class="frgt-passwrd"]');
   buttonForgotPassword.addEventListener("click", clickForgot);
-  function clickForgot(){
+  function clickForgot() {
     if (emailValidation(usernameInput.value)==false){
-      alert("Please enter valid e-mail");
+      alert ("Please enter valid e-mail");
     } else {
       alert ("New password sent to your e-mail, please confirm" + "\n" + usernameInput.value)
     }
