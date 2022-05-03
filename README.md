@@ -52,3 +52,8 @@ There will be as many archives as excercises listed on the weekly project descri
 _This week's problem involves working with DOM_
 ```
 There will be created 2 extra html files corresponding to Sign-Up and Login pages. They will be linked to the landing. Both pages will also have forms to fill in with personal information, for each form there will be correct and error messages. 
+```
+>## Week 7: JavaScript Async y Storage
+_For this week's problem, we'll have to do a request in both Login and Sign-up projects_
+```
+We will be working on our previous projects using Fetch from JavaScript to send all the data of our forms. This request should only be successful if it passes our validations, in case it doesn't it should send an Error message with the description of said error.
