@@ -24,6 +24,7 @@ function validateName(param) {
   }
   if (validateNumbers(param) == true || param.length < 3) {
     return false;
+    
   } else {
     return true;
   }
@@ -64,7 +65,7 @@ function validatePhone(phoneN) {
   for (let i = 0; i < phoneN.length; i++) {
     const element = phoneN[i];
   }
-  if (validateLetters(phoneN) == true || phoneN.length < 10) {
+  if (validateLetters(phoneN) == true || phoneN.length < 10 || phoneN.length > 10) {
     return false;
   } else {
     return true;
@@ -135,9 +136,9 @@ function validatePassword(param) {
     }
   }
   if (param.length < 8 || letters <= 0 || numbers <= 0) {
-    return false
+    return false;
   } else {
-    return true
+    return true;
   }
 }
 
@@ -157,167 +158,199 @@ window.onload = function() {
 
   var nameInput = document.getElementById("name-sup");
   var errorName = document.getElementById("invalid-name");
-  nameInput.addEventListener("blur", function() {
+  function nameEvent() {
     if (validateName(nameInput.value) == false) {
       errorName.style.visibility="visible";
       nameError = errorName.textContent;
     } else {
       nameError = nameInput.value;
     }
-  })
+  }
   nameInput.addEventListener("focus", function() {
     errorName.style.visibility="hidden";
   })
+  nameInput.addEventListener("blur", nameEvent);
 
   var surnameInput = document.getElementById("surname");
   var errorSurname = document.getElementById("invalid-surname");
-  surnameInput.addEventListener("blur", function() {
+  function surnameEvent() {
     if (validateName(surnameInput.value) == false) {
       errorSurname.style.visibility="visible";
       surnameError = errorSurname.textContent;
     } else {
       surnameError = surnameInput.value;
     }
-  })
+  }
+  surnameInput.addEventListener("blur", surnameEvent);
   surnameInput.addEventListener("focus", function() {
     errorSurname.style.visibility="hidden";
   })
 
   var documentInput = document.getElementById("document");
   var errorDoc = document.getElementById("wrong-document");
-  documentInput.addEventListener("blur", function() {
+  function documentEvent() {
     if (validateDocument(documentInput.value) == false) {
       errorDoc.style.visibility="visible";
       documentError = errorDoc.textContent;
     } else {
       documentError = documentInput.value;
     }
-  })
+  }
+  documentInput.addEventListener("blur", documentEvent);
   documentInput.addEventListener("focus", function() {
     errorDoc.style.visibility="hidden";
   })
 
   var dateInput = document.getElementById("birthdate");
   var errorDate = document.getElementById("date-before-today");
-  dateInput.addEventListener("blur", function() {
+  function dateEvent() {
     if (validateDate(dateInput.value) == false) {
       errorDate.style.visibility="visible";
       dateError = errorDate.textContent;
     } else {
       dateError = dateInput.value;
+      var year = dateError.substring(0,4);
+      var month = dateError.substring(5,7);
+      var day = dateError.substring(8,10);
+      dateError = month + '/' + day + '/' + year;
     }
-  })
+  }
+  dateInput.addEventListener("blur", dateEvent);
   dateInput.addEventListener("focus", function() {
     errorDate.style.visibility="hidden";
   })
 
   var phoneInput = document.getElementById("phone");
   var errorPhone = document.getElementById("invalid-number");
-  phoneInput.addEventListener("blur", function() {
+  function phoneEvent() {
     if (validatePhone(phoneInput.value) == false) {
       errorPhone.style.visibility="visible";
       numberError = errorPhone.textContent;
     } else {
       numberError = phoneInput.value;
     }
-  })
+  }
+  phoneInput.addEventListener("blur", phoneEvent);
   phoneInput.addEventListener("focus", function() {
     errorPhone.style.visibility="hidden";
   })
 
   var addressInput = document.getElementById("address");
   var errorAddress = document.getElementById("invalid-address");
-  addressInput.addEventListener("blur", function() {
+  function addressEvent() {
     if (validateAddress(addressInput.value) == false) {
       errorAddress.style.visibility="visible";
       addressError = errorAddress.textContent;
     } else {
       addressError = addressInput.value;
     }
-  })
+  }
+  addressInput.addEventListener("blur", addressEvent);
   addressInput.addEventListener("focus", function() {
     errorAddress.style.visibility="hidden";
   })
 
   var cityInput = document.getElementById("city");
   var errorCity = document.getElementById("invalid-city");
-  cityInput.addEventListener("blur", function() {
+  function cityEvent() {
     if (validateCity(cityInput.value) == false) {
       errorCity.style.visibility="visible";
       cityError = errorCity.textContent;
     } else {
       cityError = cityInput.value;
     }
-  })
+  }
+  cityInput.addEventListener("blur", cityEvent);
   cityInput.addEventListener("focus", function() {
     errorCity.style.visibility="hidden";
   })
 
   var postalCodeInput = document.getElementById("postal-code");
   var errorPostal = document.getElementById("invalid-postal");
-  postalCodeInput.addEventListener("blur", function(){
+  function postalCodeEvent(){
     if (validatePostalCode(postalCodeInput.value) == false) {
       errorPostal.style.visibility="visible";
       postalError = errorPostal.textContent;
     } else {
       postalError = postalCodeInput.value;
     }
-  })
+  }
+  postalCodeInput.addEventListener("blur", postalCodeEvent);
   postalCodeInput.addEventListener("focus", function() {
     errorPostal.style.visibility="hidden";
   })
 
   var emailInput = document.getElementById("e-mail");
   var errorEmail = document.getElementById("invalid-mail");
-  emailInput.addEventListener("blur", function() {
+  function emailEvent() {
     if (emailValidation(emailInput.value) == false) {
       errorEmail.style.visibility="visible";
       mailError = errorEmail.textContent;
     } else {
       mailError = emailInput.value;
     }
-  })
+  }
+  emailInput.addEventListener("blur", emailEvent);
   emailInput.addEventListener("focus", function() {
     errorEmail.style.visibility="hidden";
   })
 
   var passwordInput = document.getElementById("password");
   var errorPassword = document.getElementById("invalid-password");
-  passwordInput.addEventListener("blur", function() {
+  function passwordEvent() {
     if (validatePassword(passwordInput.value) == false) {
       errorPassword.style.visibility="visible";
       passwordError = errorPassword.textContent;
     } else {
       passwordError = passwordInput.value;
     }
-  })
+  }
+  passwordInput.addEventListener("blur", passwordEvent);
   passwordInput.addEventListener("focus", function() {
     errorPassword.style.visibility="hidden";
   })
 
   var repeatPasswordInput = document.getElementById("rpt-password");
   var errorRepeatPassword = document.getElementById("invalid-rptpassword");
-  repeatPasswordInput.addEventListener("blur", function() {
+  function rptPasswordEvent() {
     if (validatePassword(repeatPasswordInput.value) == false) {
       errorRepeatPassword.style.visibility="visible";
       rptPasswordError = errorRepeatPassword.textContent;
     } else {
       rptPasswordError = repeatPasswordInput.value;
     }
-  })
+  }
+  repeatPasswordInput.addEventListener("blur", rptPasswordEvent);
   repeatPasswordInput.addEventListener("focus", function() {
       errorRepeatPassword.style.visibility="hidden";
   })
   
-  function allValidationsOk () {
-    if (validateName && validateDocument && validateDate && validatePhone && validateAddress &&
-    validateCity && validatePostalCode && emailValidation && validatePassword){
+  function allValidationsOk() {
+    if (validateName(nameInput.value) && validateDocument(documentInput.value) && 
+      validatePhone(phoneInput.value) && 
+      validateAddress(addressInput.value) && validateCity(cityInput.value) && 
+      validatePostalCode(postalCodeInput.value) && emailValidation(emailInput.value) && 
+      validatePassword(passwordInput.value) && !dateEvent()){
       return true;
     } else {
       alert("Something went wrong, check your info")
     }
   }
 
+  function storageInLocal(){
+    localStorage.setItem("name", nameInput.value);
+    localStorage.setItem("surname", surnameInput.value);
+    localStorage.setItem("document", documentInput.value);
+    localStorage.setItem("dob", dateInput.value);
+    localStorage.setItem("phone", phoneInput.value);
+    localStorage.setItem("address", addressInput.value);
+    localStorage.setItem("city", cityInput.value);
+    localStorage.setItem("zip", postalCodeInput.value);
+    localStorage.setItem("email", emailInput.value);
+    localStorage.setItem("password", passwordInput.value);
+    localStorage.setItem("rptPassword", repeatPasswordInput.value);
+  }
+ 
   var signupURL = "https://basp-m2022-api-rest-server.herokuapp.com/signup"
   
   function confirmFetch() {
@@ -327,11 +360,12 @@ window.onload = function() {
       addressError + "&city=" + cityError + "&zip=" + postalError + "&email=" + 
       mailError + "&password=" + passwordError + "&repeatPassword=" + rptPasswordError)
       .then(function (response) {
+        alert ("Success!")
         return response.json();
       })
       .then(function(data) {
         console.log(data);
-        alert (data.msg + "\n" + "Name: " + nameError + "\nSurname: " + surnameError + "\nDocument: " + 
+        alert ("Name: " + nameError + "\nSurname: " + surnameError + "\nDocument: " + 
         documentError + "\nDate of Birth: " + dateError + "\nPhone number: " + 
         numberError + "\nAddress: " + addressError + "\nLocation: " + cityError + 
         "\nPostal code: " + postalError + "\nE-mail: " + mailError + "\nPassword: " + 
@@ -346,12 +380,28 @@ window.onload = function() {
   function showConfirm(event) {
     event.preventDefault();
     confirmFetch();
-    alert("Name: " + nameError + "\nSurname: " + surnameError + "\nDocument: " + 
-    documentError + "\nDate of Birth: " + dateError + "\nPhone number: " + 
-    numberError + "\nAddress: " + addressError + "\nLocation: " + cityError + 
-    "\nPostal code: " + postalError + "\nE-mail: " + mailError + "\nPassword: " + 
-    passwordError + "\nRepeat password: " + rptPasswordError);
+    storageInLocal();
   }
   var buttonConfirm = document.querySelector('input[type="submit"]');
   buttonConfirm.addEventListener('click', showConfirm);
+
+  function refreshDataFromLocal(){
+  if (localStorage.name && localStorage.surname && localStorage.document && 
+    localStorage.address && localStorage.dob && localStorage.city && localStorage.zip &&
+    localStorage.phone && localStorage.email && localStorage.password && 
+    localStorage.rptPassword){
+      nameInput.value = localStorage.name;
+      surnameInput.value = localStorage.surname;
+      documentInput.value = localStorage.document;
+      dateInput.value = localStorage.dob;
+      phoneInput.value = localStorage.phone;
+      addressInput.value = localStorage.address;
+      cityInput.value = localStorage.city;
+      postalCodeInput.value = localStorage.zip;
+      emailInput.value = localStorage.email;
+      passwordInput.value = localStorage.password;
+      repeatPasswordInput.value = localStorage.rptPassword;
+    }
+  }
+  refreshDataFromLocal();
 }
