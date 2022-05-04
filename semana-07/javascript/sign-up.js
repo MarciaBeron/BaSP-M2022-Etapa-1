@@ -326,11 +326,11 @@ window.onload = function() {
   })
   
   function allValidationsOk() {
-    if (validateName(nameInput.value) && validateDocument(documentInput.value) && 
-      validatePhone(phoneInput.value) && 
-      validateAddress(addressInput.value) && validateCity(cityInput.value) && 
-      validatePostalCode(postalCodeInput.value) && emailValidation(emailInput.value) && 
-      validatePassword(passwordInput.value) && !dateEvent()){
+    if (validateName(nameInput.value) == true && validateDocument(documentInput.value) == true && 
+      validatePhone(phoneInput.value) == true && 
+      validateAddress(addressInput.value) == true && validateCity(cityInput.value) == true && 
+      validatePostalCode(postalCodeInput.value) == true && emailValidation(emailInput.value) == true && 
+      validatePassword(passwordInput.value) == true && !dateEvent() == true){
       return true;
     } else {
       alert("Something went wrong, check your info")
@@ -349,38 +349,41 @@ window.onload = function() {
     localStorage.setItem("email", emailInput.value);
     localStorage.setItem("password", passwordInput.value);
     localStorage.setItem("rptPassword", repeatPasswordInput.value);
+
   }
  
   var signupURL = "https://basp-m2022-api-rest-server.herokuapp.com/signup"
   
   function confirmFetch() {
-    if (allValidationsOk()) {
-      fetch(signupURL + "?name=" + nameError + "&lastName=" + surnameError + "&dni=" + 
-      documentError + "&dob=" + dateError + "&phone=" + numberError + "&address=" + 
-      addressError + "&city=" + cityError + "&zip=" + postalError + "&email=" + 
-      mailError + "&password=" + passwordError + "&repeatPassword=" + rptPasswordError)
-      .then(function (response) {
+    fetch(signupURL + "?name=" + nameError + "&lastName=" + surnameError + "&dni=" + 
+    documentError + "&dob=" + dateError + "&phone=" + numberError + "&address=" + 
+    addressError + "&city=" + cityError + "&zip=" + postalError + "&email=" + 
+    mailError + "&password=" + passwordError + "&repeatPassword=" + rptPasswordError)
+    .then(function (response) {
+      if (allValidationsOk()) {
+        storageInLocal();
         alert ("Success!")
         return response.json();
-      })
-      .then(function(data) {
-        console.log(data);
-        alert ("Name: " + nameError + "\nSurname: " + surnameError + "\nDocument: " + 
-        documentError + "\nDate of Birth: " + dateError + "\nPhone number: " + 
-        numberError + "\nAddress: " + addressError + "\nLocation: " + cityError + 
-        "\nPostal code: " + postalError + "\nE-mail: " + mailError + "\nPassword: " + 
-        passwordError + "\nRepeat password: " + rptPasswordError);
-      })
-      .catch(function(error) {
-        alert("Sign-up failed", error)
-      })
-    }
+      } else {
+        throw Error;
+      }
+    })
+    .then(function(data) {
+      console.log(data);
+      alert ("Name: " + nameError + "\nSurname: " + surnameError + "\nDocument: " + 
+      documentError + "\nDate of Birth: " + dateError + "\nPhone number: " + 
+      numberError + "\nAddress: " + addressError + "\nLocation: " + cityError + 
+      "\nPostal code: " + postalError + "\nE-mail: " + mailError + "\nPassword: " + 
+      passwordError + "\nRepeat password: " + rptPasswordError);
+    })
+    .catch(function(error) {
+      alert("Sign-up failed", error);
+    })
   }
   
   function showConfirm(event) {
     event.preventDefault();
     confirmFetch();
-    storageInLocal();
   }
   var buttonConfirm = document.querySelector('input[type="submit"]');
   buttonConfirm.addEventListener('click', showConfirm);
